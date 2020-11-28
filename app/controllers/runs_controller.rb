@@ -10,4 +10,9 @@ def show
 render({ :template => "runs_templates/show.html.erb" })
 end 
 
+def favorites 
+
+render({ :template => "runs_templates/favorites.html.erb" })
+end 
+
 end 
