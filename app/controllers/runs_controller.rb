@@ -79,9 +79,6 @@ def filter
 matching_runs = Run.all
 
 @the_city = params.fetch("input_city")
-
-@list_of_runs = matching_runs.order({ :city => :desc })
-
 @filtered_runs = matching_runs.where(:city => @the_city)
 
 render({ :template => "/runs/filter.html.erb" })

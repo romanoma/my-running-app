@@ -1,4 +1,101 @@
-<h1>Hello There</h1>
+<h1>Running in <%= @the_city %> </h1>
 
-<%= @filtered_runs %>
+<p>
+Here is a list of runs we think you will love in <%= @the_city %>
+</p>
+
+  <table>
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          City
+        </th>
+
+        <th>
+          Start
+        </th>
+
+        <th>
+          End
+        </th>
+
+        <th>
+          Distance
+        </th>
+
+        <th>
+          Track type
+        </th>
+
+        <th>
+          Hills
+        </th>
+
+        <th>
+          Runner
+        </th>
+
+        <th>
+          Show Details 
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @filtered_runs.each do |a_run| %>
+      <tr>
+        <td>
+          <%= a_run.id %>
+        </td>
+
+        <td>
+          <%= a_run.city %>
+        </td>
+
+        <td>
+          <%= a_run.start %>
+        </td>
+
+        <td>
+          <%= a_run.end %>
+        </td>
+
+        <td>
+          <%= a_run.distance %>
+        </td>
+
+        <td>
+          <%= a_run.track_type %>
+        </td>
+
+        <td>
+          <%= a_run.hills %>
+        </td>
+
+        <td>
+          <%= a_run.runner %>
+        </td>
+
+      
+        <td>
+          <a href="/runs/<%= a_run.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<p>
+Go <a href="/homepage"> Back </a>
+</p>
+
+
+
 
