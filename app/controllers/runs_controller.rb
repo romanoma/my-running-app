@@ -70,6 +70,8 @@ class RunsController < ApplicationController
 
 def favorites 
 
+matching_users = Runner.all
+
 render({ :template => "/runs_templates/favorites.html.erb" })
 
 end 
