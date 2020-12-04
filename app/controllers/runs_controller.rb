@@ -27,7 +27,6 @@ class RunsController < ApplicationController
     the_run.hills = params.fetch("query_hills")
     the_run.details = params.fetch("query_details")
     the_run.runner = params.fetch("query_runner")
-    the_run.photo = params.fetch("query_photo")
 
     if the_run.valid?
       the_run.save
@@ -73,6 +72,19 @@ def favorites
 
 render({ :template => "/runs_templates/favorites.html.erb" })
 
+end 
+
+def filter 
+
+matching_runs = Run.all
+
+@the_city = params.fetch("input_city")
+
+@list_of_runs = matching_runs.order({ :city => :desc })
+
+@filtered_runs = matching_runs.where(:city => @the_city)
+
+render({ :template => "/runs/filter.html.erb" })
 end 
 
 end
