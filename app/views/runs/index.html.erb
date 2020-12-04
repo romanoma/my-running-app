@@ -39,19 +39,11 @@
         </th>
 
         <th>
-          Details
-        </th>
-
-        <th>
           Runner
         </th>
 
         <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
+          Show Details 
         </th>
 
         <th>
@@ -89,19 +81,9 @@
         </td>
 
         <td>
-          <%= a_run.details %>
-        </td>
-
-        <td>
           <%= a_run.runner %>
         </td>
 
-        <td>
-          <%= time_ago_in_words(a_run.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_run.updated_at) %> ago
-        </td>
 
         <td>
           <a href="/runs/<%= a_run.id %>">
