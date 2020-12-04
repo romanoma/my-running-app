@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   # Uncomment this if you want to force runners to sign in before any other actions
   # before_action(:force_runner_sign_in)
   
+  def homepage 
+
+    redirect_to("/runner_sign_up", { :notice => "Runner account created successfully."})
+  end 
+
   def load_current_runner
     the_id = session[:runner_id]
     @current_runner = Runner.where({ :id => the_id }).first
