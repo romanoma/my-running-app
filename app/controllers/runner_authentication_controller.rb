@@ -41,6 +41,7 @@ class RunnerAuthenticationController < ApplicationController
     @runner.email = params.fetch("query_email")
     @runner.password = params.fetch("query_password")
     @runner.password_confirmation = params.fetch("query_password_confirmation")
+    @runner.username = params.fetch("query_username")
 
     save_status = @runner.save
 
