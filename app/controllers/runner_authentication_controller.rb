@@ -1,6 +1,6 @@
 class RunnerAuthenticationController < ApplicationController
-  # Uncomment this if you want to force runners to sign in before any other actions
-  # skip_before_action(:force_runner_sign_in, { :only => [:sign_up_form, :create, :sign_in_form, :create_cookie] })
+ # Uncomment this if you want to force runners to sign in before any other actions
+#skip_before_action(:force_runner_sign_in, { :only => [:sign_up_form, :create, :sign_in_form, :create_cookie] })
 
   def sign_in_form
     render({ :template => "runner_authentication/sign_in.html.erb" })
@@ -19,7 +19,7 @@ class RunnerAuthenticationController < ApplicationController
       else
         session[:runner_id] = runner.id
       
-        redirect_to("/", { :notice => "Signed in successfully." })
+        redirect_to("/homepage", { :notice => "Signed in successfully." })
       end
     else
       redirect_to("/runner_sign_in", { :alert => "No runner with that email address." })
