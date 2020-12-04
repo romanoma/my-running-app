@@ -1,0 +1,198 @@
+<div>
+  <div>
+    <h1>
+      List of all runs
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new run
+    </h2>
+
+    <form action="/insert_run" method="post">
+      <div>
+        <label for="city_box">
+          City
+        </label>
+
+        <input type="text" id="city_box" name="query_city">
+      </div>
+
+      <div>
+        <label for="start_box">
+          Start
+        </label>
+
+        <input type="text" id="start_box" name="query_start">
+      </div>
+
+      <div>
+        <label for="end_box">
+          End
+        </label>
+
+        <input type="text" id="end_box" name="query_end">
+      </div>
+
+      <div>
+        <label for="distance_box">
+          Distance
+        </label>
+
+        <input type="text" id="distance_box" name="query_distance">
+      </div>
+
+      <div>
+        <label for="track_type_box">
+          Track type
+        </label>
+
+        <input type="text" id="track_type_box" name="query_track_type">
+      </div>
+
+      <div>
+        <label for="hills_box">
+          Hills
+        </label>
+
+        <input type="text" id="hills_box" name="query_hills">
+      </div>
+
+      <div>
+        <label for="details_box">
+          Details
+        </label>
+
+        <input type="text" id="details_box" name="query_details">
+      </div>
+
+      <div>
+        <label for="runner_box">
+          Runner
+        </label>
+
+        <input type="text" id="runner_box" name="query_runner">
+      </div>
+
+      <button>
+        Create run
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table>
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          City
+        </th>
+
+        <th>
+          Start
+        </th>
+
+        <th>
+          End
+        </th>
+
+        <th>
+          Distance
+        </th>
+
+        <th>
+          Track type
+        </th>
+
+        <th>
+          Hills
+        </th>
+
+        <th>
+          Details
+        </th>
+
+        <th>
+          Runner
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_runs.each do |a_run| %>
+      <tr>
+        <td>
+          <%= a_run.id %>
+        </td>
+
+        <td>
+          <%= a_run.city %>
+        </td>
+
+        <td>
+          <%= a_run.start %>
+        </td>
+
+        <td>
+          <%= a_run.end %>
+        </td>
+
+        <td>
+          <%= a_run.distance %>
+        </td>
+
+        <td>
+          <%= a_run.track_type %>
+        </td>
+
+        <td>
+          <%= a_run.hills %>
+        </td>
+
+        <td>
+          <%= a_run.details %>
+        </td>
+
+        <td>
+          <%= a_run.runner %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_run.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_run.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/runs/<%= a_run.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

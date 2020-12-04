@@ -10,6 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_11_28_024809) do
+
+  create_table "runners", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "runs", force: :cascade do |t|
+    t.string "city"
+    t.string "start"
+    t.string "end"
+    t.string "distance"
+    t.string "track_type"
+    t.string "hills"
+    t.string "details"
+    t.integer "runner"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
