@@ -73,6 +73,8 @@ def favorites
 
 matching_users = Runner.all
 
+@current_runner = Runner.where({ :id => session[:id] })
+
 render({ :template => "/runs_templates/favorites.html.erb" })
 
 end 
