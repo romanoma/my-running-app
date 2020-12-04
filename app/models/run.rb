@@ -8,6 +8,7 @@
 #  distance   :string
 #  end        :string
 #  hills      :string
+#  photo      :string
 #  runner     :integer
 #  start      :string
 #  track_type :string

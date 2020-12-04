@@ -27,6 +27,7 @@ class RunsController < ApplicationController
     the_run.hills = params.fetch("query_hills")
     the_run.details = params.fetch("query_details")
     the_run.runner = params.fetch("query_runner")
+    the_run.photo = params.fetch("query_photo")
 
     if the_run.valid?
       the_run.save
