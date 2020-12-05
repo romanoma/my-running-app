@@ -78,6 +78,10 @@ These are the runs that other users have recomended!
         </th>
 
         <th>
+        <p class="text-secondary">Runner
+        </th>
+
+        <th>
           <p class="text-secondary">Track Type 
         </th>
 
@@ -110,6 +114,10 @@ These are the runs that other users have recomended!
 
         <td>
           <%= a_run.distance %>
+        </td>
+
+        <td>
+          <%= a_run.runner %>
         </td>
 
         <td>
@@ -202,7 +210,7 @@ These are the runs that other users have recomended!
           Runner
         </label>
 
-        <input type="text" id="id_box" placeholder=<%= @current_runner.id%>>
+        <input type="text" id="id_box" placeholder=<%= @current_runner.id%> name="query_runner">
       </div>
       
       <div>
