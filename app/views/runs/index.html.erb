@@ -1,5 +1,3 @@
-@runner
-
 <div>
   <div>
     <h1>
@@ -129,7 +127,9 @@ These are the runs that other users have recomended!
         </td>
 
         <td>
-          <%= a_run.runner %>
+          <% a_run.runner %>
+          <% this_runner = Runner.where({:id => a_run.runner}).at(0) %>
+          <%= username = this_runner.username  %>
         </td>
 
         <td>
