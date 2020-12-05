@@ -4,6 +4,87 @@
 These are the runs you have uploaded!
 </p>
 
+    <table border="1">
+      <tr>
+
+        <th>
+        <p class="text-secondary">City
+        </th>
+
+        <th>
+        <p class="text-success">Start
+        </th>
+
+        <th>
+          <p class="text-danger">End
+        </th>
+
+        <th>
+        <p class="text-secondary">Distance
+        </th>
+
+        <th>
+          <p class="text-secondary">Track Type 
+        </th>
+
+        <th>
+          <p class="text-secondary">Hills
+        </th>
+
+        <th>
+          <p class="text-secondary">Runner
+        </th>
+
+        <th>
+          <p class="text-secondary">Show Details 
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_runs.each do |a_run| %>
+      <tr>
+
+        <td>
+          <%= a_run.city %>
+        </td>
+
+        <td>
+          <%= a_run.start %>
+        </td>
+
+        <td>
+          <%= a_run.end %>
+        </td>
+
+        <td>
+          <%= a_run.distance %>
+        </td>
+
+        <td>
+          <%= a_run.track_type %>
+        </td>
+
+        <td>
+          <%= a_run.hills %>
+        </td>
+
+        <td>
+          <%= a_run.runner %>
+        </td>
+
+      
+        <td>
+          <a href="/runs/<%= a_run.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+
+<p>
 <div>
 Go back to <a href="/homepage">Homepage</a>
 </div>
@@ -13,3 +94,4 @@ Edit your <a href="/edit_runner_profile">Profile</a>
 <div>
 Cancel your <a href="/cancel_runner_account">Account</a>
 </div>
+</p>

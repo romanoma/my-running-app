@@ -18,6 +18,11 @@ class RunsController < ApplicationController
   end
 
   def create
+
+    @current_runner = Runner.where({ :id => session[:runner_id] })
+    @list_of_runs = Run.where({ :runner => session[:runner_id] })
+
+
     the_run = Run.new
     the_run.city = params.fetch("query_city")
     the_run.start = params.fetch("query_start")
@@ -74,6 +79,7 @@ def favorites
 matching_users = Runner.all
 
 @current_runner = Runner.where({ :id => session[:runner_id] })
+@list_of_runs = Run.where({ :runner => session[:runner_id] })
 
 render({ :template => "/runs_templates/favorites.html.erb" })
 
