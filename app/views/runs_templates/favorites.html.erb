@@ -1,9 +1,12 @@
-<h1>Hi <%= @current_runner %> </h1>
+<h1>Hi <%= session[:user_email]%> </h1>
 
 <p>
 These are the runs have uploaded!
 </p>
 
+<div>
+Go back to <a href="/homepage">Homepage</a>
+</div>
 <div>
 Edit your <a href="/edit_runner_profile">Profile</a>
 </div>

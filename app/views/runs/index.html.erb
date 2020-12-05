@@ -1,49 +1,96 @@
 <div>
   <div>
     <h1>
-      Suggested Runs
+      <p class="text-primary">Suggested Runs</p>
     </h1>
   </div>
 </div>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+<i class="fas fa-running"></i>
+
+
+<p>
+These are the runs that other users have recomended!
+</p>
 
 <div>
   <div>
-    <table>
+    <table border="1">
       <tr>
+
         <th>
-          ID
+        <p class="text-secondary">City
         </th>
 
         <th>
-          City
+        <p class="text-success">Start
         </th>
 
         <th>
-          Start
+          <p class="text-danger">End
         </th>
 
         <th>
-          End
+        <p class="text-secondary">Distance
         </th>
 
         <th>
-          Distance
+          <p class="text-secondary">Track Type 
         </th>
 
         <th>
-          Track type
+          <p class="text-secondary">Hills
         </th>
 
         <th>
-          Hills
+          <p class="text-secondary">Runner
         </th>
 
         <th>
-          Runner
-        </th>
-
-        <th>
-          Show Details 
+          <p class="text-secondary">Show Details 
         </th>
 
         <th>
@@ -52,9 +99,6 @@
 
       <% @list_of_runs.each do |a_run| %>
       <tr>
-        <td>
-          <%= a_run.id %>
-        </td>
 
         <td>
           <%= a_run.city %>
@@ -101,7 +145,7 @@
 <div>
   <div>
     <h2>
-      Add a new run
+      <p class="text-primary">Add a New Run</p>
     </h2>
 
     <form action="/insert_run" method="post">
@@ -177,13 +221,14 @@
         <input type="text" id="photo_box" placeholder="do you have a photo?" name="query_photo">
       </div>
 
-
+<p>
       <button>
         Create run
       </button>
     </form>
   </div>
 </div>
+</p>
 
 <p>
 <a href="/homepage">
