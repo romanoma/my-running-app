@@ -3,6 +3,7 @@ class RunsController < ApplicationController
     matching_runs = Run.all
 
     @list_of_runs = matching_runs.order({ :created_at => :desc })
+    @runner = Run.all.at(0).id
 
     render({ :template => "runs/index.html.erb" })
   end
