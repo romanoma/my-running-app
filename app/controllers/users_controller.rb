@@ -1,9 +1,5 @@
 class UsersController < ApplicationController 
 
-  def login 
-
-    render({ :template => "users_templates/login.html.erb" })
-  end 
 
   def select_run
 
