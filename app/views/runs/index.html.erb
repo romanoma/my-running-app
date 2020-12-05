@@ -84,7 +84,7 @@ These are the runs that other users have recomended!
         </th>
 
         <th>
-        <p class="text-secondary">Distance
+        <p class="text-secondary">Distance (in kms)
         </th>
 
         <th>
@@ -129,7 +129,7 @@ These are the runs that other users have recomended!
         <td>
           <% a_run.runner %>
           <% this_runner = Runner.where({:id => a_run.runner}).at(0) %>
-          <%= username = this_runner.username  %>
+          <%= username = this_runner.username  %></a>
         </td>
 
         <td>
